@@ -14,7 +14,7 @@ public class ProcessSmsOrderService implements ProcessSmsOrderUseCase {
   public void process(SmsOrder smsOrder) {
     LOG.infof(
         "Processing SmsOrder (dummy) correlationId=%s, to=%s, text=%s",
-        smsOrder.correlationId().toString(),
+        smsOrder.correlationId().value(),
         smsOrder.recipient(),
         smsOrder.text()
     );

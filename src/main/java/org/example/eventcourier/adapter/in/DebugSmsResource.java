@@ -57,6 +57,9 @@ public class DebugSmsResource {
 
     useCase.process(smsOrder);
 
-    return Response.ok(new DebugSmsResponse(correlationId.value())).build();
+    return Response
+        .status(Status.ACCEPTED)
+        .entity(new DebugSmsResponse(correlationId.value()))
+        .build();
   }
 }
