@@ -1,0 +1,18 @@
+### Debug SMS with given correlationId
+POST http://localhost:8080/debug/sms
+Content-Type: application/json
+
+{
+  "recipient": "+00 000 000",
+  "text": "Hello SMS",
+  "correlationId": "DD1BE791-9CC8-4AB7-8316-20ADDFEA342F"
+}
+
+### Debug SMS without given correlationId
+POST http://localhost:8080/debug/sms
+Content-Type: application/json
+
+{
+  "recipient": "+00 000 000",
+  "text": "Hello SMS"
+}
